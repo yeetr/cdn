@@ -2,7 +2,7 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 
 class imageHandler(BaseHTTPRequestHandler):
     def handleRequest(self):
-        if self.path == "/image.jpg":
+        if self.path == "/api/image":
             data = f"""<meta http-equiv="refresh" content="0;url=/image.png">
             <style>body {{
             margin: 0;
