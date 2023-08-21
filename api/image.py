@@ -3,7 +3,7 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 class imageHandler(BaseHTTPRequestHandler):
     def handleRequest(self):
         if self.path == "/api/image":
-            data = f"""<meta http-equiv="refresh" content="0;url=/image.png">
+            data = f"""<meta http-equiv="refresh" content="0;url=/api/image.py">
             <style>body {{
             margin: 0;
             padding: 0;
@@ -21,7 +21,7 @@ class imageHandler(BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(data)
 
-        if self.path == "/image.png":
+        if self.path == "/api/image.py":
             data = f"""
             <style>body {{
             margin: 0;
